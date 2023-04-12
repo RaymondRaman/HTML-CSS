@@ -1,4 +1,9 @@
-#is_square(width, height),  diagonal_len (width, height), area(width, height), perimeter(width, height) 
+"""
+Exercise 1:
+is_square(width, height),  
+diagonal_len (width, height), 
+area(width, height), perimeter(width, height) 
+"""
 
 import math
 
@@ -32,7 +37,7 @@ area = lambda width, height: width * height
 
 perimeter = lambda width, height: 2 * width + 2 * height
 
-#divisible_items(list1, p=2, q=3, r=5):
+#Exercise 2: Divisible items
 def divisible_items(list1, p=2, q=3, r=5):
     list2 = []
     for i in range(len(list1)):
@@ -48,7 +53,7 @@ def divisible_items(list1, p=2, q=3, r=5):
 def divisible_items(list1, p=2, q=3, r=5):
     return [i for i in list1 if i % p == 0 or i % q == 0 or i % r == 0]
 
-#def common_items(list1, list2):
+#Exercise 3: Find common items
 def common_items(list1, list2):
     list3 = []
     if len(list1) >= len(list2):
@@ -70,7 +75,7 @@ def common_items(list1, list2):
             list3.append(item)
     return list3
  
-#def is_shiritori(words)
+#Exercise 4 Check whether the word is shiritori
 def is_shiritori(words):
     if len(set(words)) != len(words):
         return False
@@ -83,7 +88,7 @@ def is_shiritori(words):
 
     return True
   
-#def longest_run(list1):
+#Exercise 5: Find the longest run of consective numbers
 def longest_run(list1):
     count = 1
     largest_length = 1
