@@ -103,4 +103,17 @@ def longest_run(list1):
             count = 1
     return largest_length
 
+#Better: Written by ChatGPT
+def longest_run(list1):
+    count = 1
+    largest_length = 1
+    for i in range(len(list1) - 1):
+        if list1[i + 1] == list1[i] + 1 or list1[i + 1] == list1[i] - 1:
+            count += 1
+            largest_length = max(largest_length, count)
+        else:
+            count = 1
+    return largest_length
+
+
 
