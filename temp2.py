@@ -1,33 +1,69 @@
-#def sort_by_age(list1):
-def sort_by_age(list1):
-    for i in range(len(list1)-1):
-        for j in range(i+1, len(list1)):
-            if list1[i][1] > list1[j][1]:
-                list1[i], list1[j] = list1[j], list1[i]
-            elif list1[i][1] == list1[j][1]:
-                if list1[i][0] > list1[j][0]:
-                    list1[i], list1[j] = list1[j], list1[i]
-    return list1
+import sys
+
+
+def analyze(in_filename, out_filename):
+    try:
+        with open(in_filename, "r") as infile:
+            contents = infile.readlines()
+
+        no_of_line = no_of_words = no_of_alphabets = no_of_digits = 0
+        for line in contents:
+            no_of_line += 1
+            words = line.split()
+            no_of_words += len(words)
+
+            for char in line:
+                if char.isalpha():
+                    no_of_alphabets += 1
+                elif char.isdigit():
+                    no_of_digits += 1
+
+        with open(out_filename, "w") as outfile:
+            outfile.write(f"Number of lines: {no_of_line}\n")
+            outfile.write(f"Number of words: {no_of_words}\n")
+            outfile.write(f"Number of alphabets: {no_of_alphabets}\n")
+            outfile.write(f"Number of digits: {no_of_digits}\n")
+
+    except FileNotFoundError:
+        print("The input file is not found!")
+    except OSError as err:
+        print(err)
+        sys.exit(0)
+
+
+if __name__ == '__main__':
+    analyze('test.txt', 'result.txt')
+    with open("result.txt", "r") as outFile:
+        print(outFile.read())
+
+
 
 #Better: Written by ChatGPT
-def sort_by_age(list1):
-    return sorted(list1, key=lambda x: (x[1], x[0]))
+import sys
 
-#def prefix_sum(a)
-def prefix_sum(a):
-    b = []
-    sum1 = 0
-    for i in range(len(a)):
-        sum1 += a[i]
-        b.append(sum1)
-    return b
+def analyze(in_filename, out_filename):
+    try:
+        with open(in_filename, "r") as infile:
+            contents = infile.read()
 
-#def merge_sorted_lists(list1, list2)
-def merge_sorted_lists(list1, list2):
-    merged_list = list1 + list2
-    for i in range(len(merged_list)):
-        for j in range(i+1, len(merged_list)):
-            if merged_list[i] > merged_list[j]:
-                merged_list[i], merged_list[j] = merged_list[j], merged_list[i]
+        lines = contents.splitlines()
+        words = contents.split()
+        no_of_alphabets = sum(c.isalpha() for c in contents)
+        no_of_digits = sum(c.isdigit() for c in contents)
 
-    return merged_list
+        with open(out_filename, "w") as outfile:
+            outfile.write(f"Number of lines: {len(lines)}\n")
+            outfile.write(f"Number of words: {len(words)}\n")
+            outfile.write(f"Number of alphabets: {no_of_alphabets}\n")
+            outfile.write(f"Number of digits: {no_of_digits}\n")
+
+    except FileNotFoundError:
+        print("The input file is not found!")
+    except OSError as err:
+        print(err)
+        sys.exit(0)
+
+if __name__ == '__main__':
+    analyze('test.txt', 'result.txt')
+    with open("result.txt", "r") as outFile:
+        print(outFile.read())
