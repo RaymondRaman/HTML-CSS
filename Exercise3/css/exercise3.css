@@ -1,0 +1,42 @@
+body {
+    background-image: url("../img/pic2.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+#navbar{
+    font-size: 15px;
+}
+
+h1 {
+    color: red;
+    font-weight: 900;
+    font-family: 'Dancing Script', cursive;
+    width: 80px;
+    border: 2px dashed;
+    padding: 20px;
+    /* margin:100px; */
+    /* border-bottom: 2px dashed; */
+    border-radius: 200px;
+}
+
+/* Main Section */
+.pokemon-name {
+    color: black;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 50%
+}
+
+/* .list-1{
+    font-size: 50px;
+} */
+
+/* Section-3 */
+/* #section-3 img{
+    height: 500px;
+} */
