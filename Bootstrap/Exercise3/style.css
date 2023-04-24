@@ -1,0 +1,12 @@
+/* List */
+li {
+    display: inline;
+    margin: 0 20px;
+}
+
+/* Navbar hat */
+.navbar-hat{
+    color: #0a2a61;
+    --fa-animation-duration: 2s;
+    --fa-beat-scale: 1.2;
+}
