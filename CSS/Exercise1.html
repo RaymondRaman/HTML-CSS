@@ -1,0 +1,50 @@
+<!-- Exercise
+The code below includes HTML and partially written CSS. Do the following two tasks:
+
+Apply the border-bottom (border colour must be black) CSS property to h1 elements with a class or id attribute
+Apply the font-style CSS property to p elements with a class or id attribute -->
+
+<html>
+
+<head>
+    <title>Exercise: Selecting Nested Elements</title>
+    <style>
+        /* 
+          Use selectors to give a border to nested 
+          h1 elements that have class and id attributes
+        */
+
+        div.aboutClassSelectors>h1,
+        div#aboutIdSelectors>h1 {
+            border-bottom: 1px solid black;
+        }
+
+        /* 
+          Use selectors to italisize text for nested 
+          p elements that have class and id attributes
+        */
+
+        div.aboutClassSelectors>p,
+        div#aboutIdSelectors>p {
+
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aboutClassSelectors">
+        <h1>Using Class Selectors To Select Nested Elements</h1>
+        <p>How would you write a CSS rule to select elements within a specific <code>class</code>?</p>
+    </div>
+    <div id="aboutIdSelectors">
+        <h1>Using ID Selectors to Select Nested Elements</h1>
+        <p>How would you write a CSS rule to select elements within a specific <code>id</code>?</p>
+    </div>
+    <div>
+        <h1>Writing Selectors to Exclude Certain Elements</h1>
+        <p>These elements should not have any styling.</p>
+    </div>
+</body>
+
+</html>
