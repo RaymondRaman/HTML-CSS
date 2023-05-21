@@ -30,4 +30,7 @@ content1.appendChild(li1);
 content1.appendChild(li2);
 content1.appendChild(li3);
 
-
+// Exercise
+// Modify the following ordered list programmatically to use big Roman numerals for the list items.
+var input = document.querySelector('ol');
+input.setAttribute('type', 'i')
