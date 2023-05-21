@@ -48,5 +48,33 @@ var arraySum = function(numbers) {
   return sums;
 };
 
+// Exercise 
+// Convert the following array of arrays:
 
+// [ ["Mary", 10], ["Barbara", 11], ["David", 12], ["Alex", 11] ];
+// into an array of objects, named students. Each object in the array should have a name and age property.
+var student1 = {
+   name: "Mary",
+   age: 10
+}
+
+var student2 = {
+   name: "Barbara",
+   age: 11
+}
+
+var student3 = {
+   name: "David",
+   age: 12
+}
+
+var student4 = {
+   name: "Alex",
+   age: 11
+}
+
+var students = [
+  //insert your code here
+  student1, student2, student3, student4
+];
 
