@@ -65,5 +65,21 @@ button.onclick = function(){
 	this.style.color = randomColor();
 }
 
+// Exercise 
+// Let’s start to create a to-do list. Given the following HTML, use Javascript to add a list item to the to-do list when a user clicks the ‘Add’ button.
 
+// The contents of the list item should be the input provided.
+// If the user clicks ‘Add’ and there is no input, a list item should not be added.
+// The to-do input should be reset after the list item is added.
+var addButton = document.getElementById('addTodo');
+var toDoList = document.getElementById('todoList')
 
+addButton.onclick = function() {
+    var toDo_obj = document.getElementById("todo").value;
+    if(toDo_obj != ""){
+        var li1 = document.createElement('li');
+        li1.innerHTML = toDo_obj;
+        toDoList.appendChild(li1);
+        document.getElementById("todo").value = "";
+    }
+};
