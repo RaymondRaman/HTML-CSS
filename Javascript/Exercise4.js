@@ -66,3 +66,49 @@ var incrementIndex = function(){
 next.onclick = function(){
     img.setAttribute('src', images[incrementIndex(currentIndex)])  
 }
+
+// Exercise 
+// First, create a function named decrementIndex, which updates currentIndex by decrementing it and cycles to the last array index position if it goes past the first index position, as shown in this diagram.
+// Implement a function that decrements currentIndex, and cycles back to the end
+// Implement a function that decrements currentIndex, and cycles back to the end
+// After implementing decrementIndex, create an event listener for the previous <button> element that cycles through the images through the use of the decrementIndex function.
+var images = [
+  "/udata/DErqVR5q0Pv/longexposurewaterfall1.jpg",
+  "/udata/MLE2D8Lzv6X/route66.jpg",
+  "/udata/nPaBd6Mq1Ly/archesdrive.jpg",
+  "/udata/1krmXeav6GB/army2.jpg",
+  "/udata/1klaZD0vxjz/redwoodupwards2.jpg",
+  "/udata/4WQvGrR56Qq/solduc2.jpg",
+  "/udata/1koZJB2vq8k/truck4scale.jpg"
+];
+
+var currentIndex = 0; 
+
+var img = document.querySelector('img');
+var next = document.getElementById('next-button');
+var prev = document.getElementById('prev-button');
+
+
+var incrementIndex = function(){
+    currentIndex = currentIndex + 1;
+    if (currentIndex > images.length - 1) {currentIndex = 0}
+    return currentIndex;
+}
+
+var decrementIndex = function(){
+    currentIndex--;
+    if (currentIndex < 0) {currentIndex = images.length - 1}
+    return currentIndex;
+}
+
+// copy your event listener code for the #next-button click here
+next.onclick = function(){
+  img.setAttribute('src', images[incrementIndex(currentIndex)]);  
+}
+// create an event listener for a #prev-button click
+// decrement the index
+// set the img src to the previous URL in the images array
+prev.onclick = function(){
+    img.setAttribute('src', images[decrementIndex(currentIndex)]);
+}
+
