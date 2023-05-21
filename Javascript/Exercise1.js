@@ -78,3 +78,37 @@ var students = [
   student1, student2, student3, student4
 ];
 
+Exercise #
+Given an array of student objects, structured like so:
+
+var students = [
+  { 
+    name: "Mary", 
+    age: 10, 
+    grades: [90, 88, 95]
+  }, 
+  {
+    name: "Joseph", 
+    age: 11, 
+    grades: [80, 100, 90, 96]
+  }
+];
+
+// Write a function that returns an array of grade averages. For instance, if the returned array was named averages:
+
+// averages[0] would equal 91
+// averages[1] would equal 91.5
+// Assume each student object in your array has a grades property.
+var getAverages = function(students) {
+  var averages = Array(students.length).fill(0);
+  
+  for (var i = 0; i < students.length; i++) {
+    for (var j = 0; j < students[i].grades.length; j++) {
+      averages[i] += students[i].grades[j]; 
+    }
+    averages[i] /= students[i].grades.length; 
+  }
+  
+  return averages;
+};
+
