@@ -34,3 +34,18 @@ content1.appendChild(li3);
 // Modify the following ordered list programmatically to use big Roman numerals for the list items.
 var input = document.querySelector('ol');
 input.setAttribute('type', 'i')
+
+// Exercise #
+// Modify the onclick event listener to add a <p> element that says Clicked! every time the <button> is clicked.
+var button = document.querySelector('button');
+
+button.onclick = function() {
+  var par = document.createElement('p');
+  par.innerHTML = "Clicked!"
+  
+  var content = document.querySelector('body');
+  content.appendChild(par);
+}
+
+
+
