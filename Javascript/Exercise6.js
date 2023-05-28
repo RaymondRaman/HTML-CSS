@@ -18,3 +18,5 @@ let a = parseInt(prompt("Enter an integer?")); // 1st integer
 let b = parseInt(prompt("Enter another integer?")); // 2nd integer
 let result = a + b; // adding up
 console.log("When we apply + operator it gives " + result + " which is addition of two numbers!");
+let a = parseFloat(prompt("Enter a floating-point value?")); // Taking float variable input in a
+console.log("You entered the value " + a);
