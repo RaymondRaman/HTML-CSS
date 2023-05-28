@@ -40,4 +40,19 @@ if(workingHour >= 40) {
     console.log(`Regular pay: ${regularPay}`);
 }
 
+// Write your code below:
+let x = parseFloat(prompt("Enter the x-coordinate: "));
+let y = parseFloat(prompt("Enter the y-coordinate: "));
+if( x > 0 && y > 0) {
+    console.log("The point lies in the 1st Quadrant.");
+} else if( x < 0 && y > 0) {
+    console.log("The point lies in the 2nd Quadrant.");
+} else if( x < 0 && y < 0) {
+    console.log("The point lies in the 3rd Quadrant.");
+} else if( x > 0 && y < 0) {
+    console.log("The point lies in the 4th Quadrant.");
+} else {
+     console.log("The point lies in center.");
+}
+
 
