@@ -20,3 +20,24 @@ let result = a + b; // adding up
 console.log("When we apply + operator it gives " + result + " which is addition of two numbers!");
 let a = parseFloat(prompt("Enter a floating-point value?")); // Taking float variable input in a
 console.log("You entered the value " + a);
+
+// Write your code below:
+let regularPay = 0;
+let overtimePay = 0;
+let totalPay = 0;
+let workingHour = parseInt(prompt("Eneter your working hours: "));
+let hourRate = parseInt(prompt("Enter the hour rate: "));
+if(workingHour >= 40) {
+    regularPay = hourRate * 40;
+    overtimePay = hourRate * 1.5 * (workingHour - 40);
+    totalPay = regularPay + overtimePay;
+
+    console.log(`Regular pay: ${regularPay}`);
+    console.log(`Overtime pay: ${overtimePay}`);
+    console.log(`Total pay: ${totalPay}`);
+} else {
+    regularPay = workingHour * hourRate;
+    console.log(`Regular pay: ${regularPay}`);
+}
+
+
