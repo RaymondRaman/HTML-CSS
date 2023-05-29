@@ -64,3 +64,7 @@ for (let a of [0, 1, 2, 3, 4]) // Accessing each value
 for(let i of [1, 2, 3, 4, 5]) {
     console.log(0 + (i-1) * 5)
 }
+// Write your code here
+for(let i of [1, 2, 3, 4, 5]) {
+    console.log(1 * 3 ** (i - 1));
+}
