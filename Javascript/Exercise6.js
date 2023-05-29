@@ -122,5 +122,16 @@ while(greatestCommonDivisor <= numberOne && greatestCommonDivisor <= numberTwo) 
 
 console.log(`The greatest common divisor is: ${result}`);
 
+// square star
+let usersInput = parseInt(prompt("Enter a number: "));
+
+for (let row = 0; row < usersInput; row++) {
+    let rowOutput = "";
+    for (let col = 0; col < usersInput; col++) {
+        rowOutput += `*`;
+    }
+    console.log(rowOutput);
+}
+
 
 
