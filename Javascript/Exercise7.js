@@ -91,3 +91,17 @@ while(leftMost <= rightMost) {
     }
 }
 
+// Fibonacci sequence#
+// Write your program here
+let usersInput = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+let count = 2;
+while(count < usersInput.length) {
+    if(usersInput[count] != (usersInput[count-1] + usersInput[count - 2])) {
+        console.log(`It's not a Fibonacci sequence due to the value ${usersInput[count]} at index ${count}.`)
+        break;
+    }
+    count++;
+    if(count == usersInput.length - 1) {
+        console.log(`Hurrah ... we've got a Fibonacci sequence.`);
+    }
+}
