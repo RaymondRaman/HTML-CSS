@@ -56,3 +56,7 @@ if (x > 0 && y > 0) {
 } else {
     console.log("The point lies in the center.");
 }
+
+// for of loop
+for (let a of [0, 1, 2, 3, 4]) // Accessing each value 
+    console.log(a);
