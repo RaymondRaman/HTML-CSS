@@ -60,3 +60,7 @@ if (x > 0 && y > 0) {
 // for of loop
 for (let a of [0, 1, 2, 3, 4]) // Accessing each value 
     console.log(a);
+// Write your code here
+for(let i of [1, 2, 3, 4, 5]) {
+    console.log(0 + (i-1) * 5)
+}
