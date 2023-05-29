@@ -39,3 +39,30 @@ while(leftMost <= rightMost) {
         console.log(`${result} is a palindrome`);
     }
 }
+
+// reversed string
+// Write your code here.
+let usersInput = ['a','e','i','o','u','w','h','y'];
+let originalArray = "";
+let reversedArray = "";
+
+for(let i = 0; i < usersInput.length; i++) {
+    originalArray = originalArray + usersInput[i] + ",";
+    if(i == usersInput.length - 1) {
+        originalArray = originalArray.slice(0, -1);
+    }
+}
+
+let reversedUsersInput = usersInput.reverse();
+for(let i = 0; i < usersInput.length; i++) {
+    reversedArray = reversedArray + reversedUsersInput[i] + ",";
+     if(i == usersInput.length - 1) {
+        reversedArray = reversedArray.slice(0, -1);
+    }
+}
+
+console.log(
+`Original array: ${originalArray}
+ Reversed array: ${reversedArray}`
+)
+
