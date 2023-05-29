@@ -145,3 +145,13 @@ for(let row = 0; row < numberOfRow; row++){
     console.log(result);
 }
 
+// triangle star
+// Write your code here
+let numberOfCol = parseInt(prompt("Enter the number of column: "));
+for(let row = 0; row < numberOfCol; row++) {
+    let result = "";
+    for(let col = 0; col <= row; col++) {
+        result += "*"
+    }
+    console.log(result);
+}
