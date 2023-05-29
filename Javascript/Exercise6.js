@@ -155,3 +155,19 @@ for(let row = 0; row < numberOfCol; row++) {
     }
     console.log(result);
 }
+
+// finds the power of 2 nearest to that number. 
+
+pwr = 1;
+while (pwr * 2 <= num) {
+    pwr = pwr * 2;
+}
+
+let diff1 = num - pwr;
+let diff2 = pwr * 2 - num;
+
+if (diff2 < diff1) {
+    pwr = pwr * 2;
+}
+
+console.log(`The ${pwr} is the power of 2 nearest to ${num}`);
