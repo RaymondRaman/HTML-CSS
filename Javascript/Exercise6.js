@@ -171,3 +171,15 @@ if (diff2 < diff1) {
 }
 
 console.log(`The ${pwr} is the power of 2 nearest to ${num}`);
+
+// Left shift
+// Write your code here.
+let usersInput = prompt("Enter the string: ");
+let result = "";
+for (let i = 1; i < usersInput.length; i++) {
+    result += usersInput[i];
+}
+
+console.log(result);
+
+
