@@ -116,5 +116,37 @@ for(let row = 0; row < usersInput.length; row++) {
     console.log(`Sum of Row${row+1}: ${sum}`);
     sum = 0;
 }
+
+// Calculate the sum of each column in a matrix#
+let usersInput = [
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+  [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+];
+
+console.log("Displaying in the matrix form:");
+for (let row = 0; row < usersInput.length; row++) {
+  let result = "";
+  for (let col = 0; col < usersInput[row].length; col++) {
+    result += usersInput[row][col] + ",";
+    if (col === usersInput[row].length - 1) {
+      result = result.slice(0, -1);
+    }
+  }
+  console.log(`\tRow no.${row}   ==> ${result}`);
+}
+
+let columnSums = [];
+for (let col = 0; col < usersInput[0].length; col++) {
+  let columnSum = 0;
+  for (let row = 0; row < usersInput.length; row++) {
+    columnSum += usersInput[row][col];
+  }
+  columnSums.push(columnSum);
+}
+console.log(`Column Sums are: ${columnSums.join(",")}`);
+
         
 
