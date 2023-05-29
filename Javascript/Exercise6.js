@@ -68,3 +68,42 @@ for(let i of [1, 2, 3, 4, 5]) {
 for(let i of [1, 2, 3, 4, 5]) {
     console.log(1 * 3 ** (i - 1));
 }
+
+// odd number 
+for (let i = 1; i < 200; i += 2) {
+    console.log(i);
+}
+// Arithmetic sequence
+for (let i = 1; i < 100; i += 5) {
+    console.log(i);
+}
+// Write your code here
+let a = parseInt(prompt("Enter a number: "));
+for( i = 1; i < 21; i++) {
+    console.log(`${a} x ${i} = ${a*i}`);
+}
+// Write your code here
+let usersInput = parseInt(prompt("Enter a number: "));
+let i = 1;
+while( i <= usersInput) {
+    if(usersInput % i == 0) {
+        console.log(i);
+    }
+    i++;
+}
+// prime number 
+// Write your code here
+let numberOfTime = 0;
+let usersInput = parseInt(prompt("Enter a number: "));
+for(let i = 1; i <= usersInput; i++) {
+    if(usersInput % i == 0) {
+        numberOfTime++;
+    }
+}
+
+if(numberOfTime == 2) {
+    console.log(`${usersInput} is a prime number`);
+} else {
+    console.log(`${usersInput} is not a prime number`);
+}
+
