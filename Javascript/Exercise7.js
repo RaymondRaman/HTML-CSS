@@ -105,3 +105,16 @@ while(count < usersInput.length) {
         console.log(`Hurrah ... we've got a Fibonacci sequence.`);
     }
 }
+
+//the sum of each row in a matrix#
+let usersInput = [[1,2,3],[4,5,6]];
+let sum = 0;
+for(let row = 0; row < usersInput.length; row++) {
+    for(let col = 0; col < usersInput[row].length; col++) {
+        sum += usersInput[row][col];
+    }
+    console.log(`Sum of Row${row+1}: ${sum}`);
+    sum = 0;
+}
+        
+
