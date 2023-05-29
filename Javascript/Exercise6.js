@@ -133,5 +133,15 @@ for (let row = 0; row < usersInput; row++) {
     console.log(rowOutput);
 }
 
-
+// rectangle star
+// Write your code here
+let numberOfRow = parseInt(prompt("Eneter the number of row: "));
+let numberOfCol = parseInt(prompt("Enter the number of of column: "));
+for(let row = 0; row < numberOfRow; row++){
+    let result = "";
+    for(let col = 0; col < numberOfCol; col++){
+        result += "*";
+    }
+    console.log(result);
+}
 
