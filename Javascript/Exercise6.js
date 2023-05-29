@@ -107,3 +107,20 @@ if(numberOfTime == 2) {
     console.log(`${usersInput} is not a prime number`);
 }
 
+// Greatest common divisor
+// Write your code here
+let numberOne = parseInt(prompt("Enter the first number: "));
+let numberTwo = parseInt(prompt("Enter the second number: "));
+let greatestCommonDivisor = 1;
+let result = 1;
+while(greatestCommonDivisor <= numberOne && greatestCommonDivisor <= numberTwo) {
+    if(numberOne % greatestCommonDivisor == 0 && numberTwo % greatestCommonDivisor == 0 ) {
+        result = greatestCommonDivisor;
+    }
+    greatestCommonDivisor++;
+}
+
+console.log(`The greatest common divisor is: ${result}`);
+
+
+
