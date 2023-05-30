@@ -148,5 +148,23 @@ for (let col = 0; col < usersInput[0].length; col++) {
 }
 console.log(`Column Sums are: ${columnSums.join(",")}`);
 
-        
+// Find the index of an outlier in an arithmetic sequence.
+idx = -1;
+if(list1.length < 5) {
+    idx = 0;
+    console.log("The array contain less than 5 elements.");
+} else {
+    let a = list1[0];
+    let d = list1[1] - list1[0];
+    for(let i = 2; i < list1.length; i++) {
+        if(list1[i] != a + i * d) {
+            idx = i;
+            console.log(`The outlier value is at the index: ${i+1}`);
+            break;            
+        }
+    } 
+    if(idx == -1) {
+        console.log("There is no outlier in the array.");
+    }
+}        
 
