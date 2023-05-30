@@ -37,3 +37,15 @@ function searchString(arr, target) {
 let arr = ['2','55','888','9','30','45'];
 searchString(arr, '50');
 
+// Function to display the Fibonacci sequence
+function displayFibonacci(numberOfTerms) {
+    let result = [];
+    result[0] = 0;
+    result[1] = 1;
+    for(let i = 2; i < numberOfTerms; i++) {
+        result[i] = result[i-1] + result[i-2];
+    }
+    console.log(`First ${numberOfTerms} terms of Fibonacci sequence are: ${result.join(",")}`);
+    console.log("*** End of generating Fibonacci Numbers ***");
+}
+
