@@ -64,3 +64,50 @@ function checkAnagram(str1, str2) {
     }
     return num;
 }
+
+// Circular traversal algorithmn
+let array = [2, 8, 3, 15]; // Enter the array for circular traversal  
+let currentIndex = 0;
+let previousPositiveIndex = 0;
+let allNegatives = false;
+let foundPositive = false;
+
+// This loop will traverse until all elements in array become negative
+while (!allNegatives) { 
+    if (array[currentIndex] > 0) { 
+        console.log("Processing the index " + currentIndex);
+    } else {
+        if (currentIndex != previousPositiveIndex) { 
+            console.log("Skipping the index " + currentIndex);
+        } else {
+            console.log("Stopping at the index " + currentIndex);
+        }
+    }
+    console.log(currentIndex + ' [' + array + ']');
+
+    if (array[currentIndex] > 0) { 
+        let steps = array[currentIndex];
+        array[currentIndex] = -array[currentIndex]; // Convert the value to negative
+
+        console.log("Moving " + steps + " steps");
+        let tempIndex = currentIndex;
+        for (let k = 0; k < steps; k++) { // Moving 'steps' forward in array in circular manner
+            tempIndex = (tempIndex + 1) % array.length;
+            console.log(". " + tempIndex + " [" + array + "]");
+        }
+        currentIndex = tempIndex;
+        foundPositive = true;
+    } else {
+        if (foundPositive) { 
+            previousPositiveIndex = currentIndex;
+            foundPositive = false;
+        } else {
+            if (previousPositiveIndex == currentIndex) { 
+                allNegatives = true;
+            }
+        }
+        currentIndex = (currentIndex + 1) % array.length;
+    }
+}
+console.log(" *** DONE *** ");
+
