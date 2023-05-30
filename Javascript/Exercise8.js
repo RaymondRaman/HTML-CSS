@@ -92,6 +92,10 @@ while (!allNegatives) {
         console.log("Moving " + steps + " steps");
         let tempIndex = currentIndex;
         for (let k = 0; k < steps; k++) { // Moving 'steps' forward in array in circular manner
+             // The modulo operator (%) returns the remainder of a division operation. E
+             // Effectively moving you back to the start of the array (index 0). 
+             // This ensures you always stay within the bounds of the array, 
+             // no matter how much you add to tempIndex, creating a circular or "wrap-around" effect.
             tempIndex = (tempIndex + 1) % array.length;
             console.log(". " + tempIndex + " [" + array + "]");
         }
