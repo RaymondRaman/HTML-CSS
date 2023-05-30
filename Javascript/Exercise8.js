@@ -49,3 +49,18 @@ function displayFibonacci(numberOfTerms) {
     console.log("*** End of generating Fibonacci Numbers ***");
 }
 
+// Challenge: Anagram Problem
+function checkAnagram(str1, str2) {
+    let num = 0;
+    // Write you code here
+    let sortedStr1 = str1.toLowerCase().split('').sort().join('');
+    let sortedStr2 = str2.toLowerCase().split('').sort().join('');
+    if(sortedStr1 == sortedStr2) {
+        num = 1;
+        console.log("The strings are anagrams.")
+    } else {
+        num = -1;
+        console.log("The strings are not anagrams.");
+    }
+    return num;
+}
