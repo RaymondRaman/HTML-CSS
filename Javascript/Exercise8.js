@@ -7,7 +7,7 @@ function showTableOf4() {
 
 showTableOf4();
 
-
+//Function to find distinct values
 function showDistinct(arr) {
   let distinctArr = [];
   for (let i = 0; i < arr.length; i++) {
