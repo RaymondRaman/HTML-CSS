@@ -6,3 +6,19 @@ function showTableOf4() {
  }
 
 showTableOf4();
+
+
+function showDistinct(arr) {
+  let distinctArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0 || arr[i] !== arr[i - 1]) {
+      distinctArr.push(arr[i]);
+    }
+  }
+
+  console.log(`Original array: ${arr.join(",")}`);
+  console.log(`Distinct array: ${distinctArr.join(",")}`);
+}
+
+let arr = [2, 5, 5, 8, 8, 8, 9, 30, 45];
+showDistinct(arr);
