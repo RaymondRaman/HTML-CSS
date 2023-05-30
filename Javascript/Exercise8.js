@@ -22,3 +22,18 @@ function showDistinct(arr) {
 
 let arr = [2, 5, 5, 8, 8, 8, 9, 30, 45];
 showDistinct(arr);
+
+// Function to search a string in an array
+function searchString(arr, target) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] == target) {
+            console.log(`${target} is found at index ${i}`);
+            return;
+        } 
+    }
+    console.log(`*** ${target} is NOT FOUND in the array ***`);
+}
+
+let arr = ['2','55','888','9','30','45'];
+searchString(arr, '50');
+
